@@ -1,19 +1,23 @@
 export class Tamagotchi {
-  constructor(name){
-    this.name = name;
+  constructor(){
+    this.name = "";
     this.hunger = 100;
     this.happy = 100;
   }
 
+  setName(){
+    this.name = name;
+  }
+
   setHunger() {
     setInterval(() => {
-      this.hunger-=1;
+      this.hunger-=10;
     }, 1000);
   }
 
   setHappy() {
     setInterval(() => {
-      this.happy-=1;
+      this.happy-=10;
     }, 1000);
   }
 
@@ -32,7 +36,7 @@ export class Tamagotchi {
   }
 
   die(){
-    if((this.hunger === 0) && (this.happy === 0)){
+    if((this.hunger <= 0) || (this.happy <= 0)){
       return true;
     } else{
       return false;
