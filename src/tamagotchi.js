@@ -9,21 +9,21 @@ export class Tamagotchi {
     setInterval(() => {
       this.hunger--;
     }, 5000);
-  };
+  }
 
   setHappy() {
     setInterval(() => {
       this.happy--;
     }, 5000);
-  };
+  }
 
   feed() {
     this.hunger = 100;
-  };
+  }
 
   pet(){
     this.happy = 100;
-  };
+  }
 
   die(){
     if((this.hunger === 0) && (this.happy === 0)){
