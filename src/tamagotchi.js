@@ -8,13 +8,13 @@ export class Tamagotchi {
   setHunger() {
     setInterval(() => {
       this.hunger-=1;
-    }, 2000);
+    }, 1000);
   }
 
   setHappy() {
     setInterval(() => {
       this.happy-=1;
-    }, 2000);
+    }, 1000);
   }
 
   feed() {

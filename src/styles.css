@@ -4,4 +4,9 @@
 
 .main {
   text-align: center;
+  display: none;
+}
+
+#splash {
+  text-align: center;
 }
