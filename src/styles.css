@@ -14,3 +14,16 @@
 #dead{
   display: none;
 }
+
+img {
+  height: 40%;
+  width: 40%;
+}
+
+#confusedpika {
+  display: none;
+}
+
+#sadpika {
+  display: none;
+}

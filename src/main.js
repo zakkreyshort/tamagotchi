@@ -14,6 +14,37 @@ $(document).ready(function(){
     $(".main").show();
     goober.start();
     $("#splash").hide();
+    let drain = setInterval(function() {
+      $("#hungrymeter").text(goober.hunger);
+      $("#happymeter").text(goober.happy);
+      $("#hunger-bar").css("width", goober.hunger + "%");
+      $("#happy-bar").css("width", goober.happy + "%");
+      if (goober.pikaConfused()){
+        $("#happypika").hide();
+        $("#confusedpika").show();
+      }
+      if (goober.pikaSad()){
+        $("#confusedpika").hide();
+        $("#sadpika").show();
+      }
+      if (goober.showConfused()){
+        $("#confusedpika").show();
+        $("#sadpika").hide();
+        $("#happypika").hide();
+      }
+      if (goober.showHappy()){
+        $("#confusedpika").hide();
+        $("#sadpika").hide();
+        $("#happypika").show();
+      }
+      if(goober.die()){
+        $("#displayName").text(goober.name);
+        $("#dead").show();
+        let deadname = tamagotchiName;
+        $("#displayName").text(deadname);
+        clearInterval(drain);
+      }
+      }, 1000);
   });
   
   $("#hungrymeter").html(goober.hunger);
@@ -21,20 +52,6 @@ $(document).ready(function(){
   goober.setHunger();
   goober.setHappy();
   
-  let drain = setInterval(function() {
-    $("#hungrymeter").text(goober.hunger);
-    $("#hunger-bar").css("width", goober.hunger + "%");
-    $("#happymeter").text(goober.happy);
-    $("#happy-bar").css("width", goober.happy + "%");
-    if(goober.die()){
-      $("#displayName").text(goober.name);
-      $("#dead").show();
-      let deadname = tamagotchiName;
-      $("#displayName").text(deadname);
-      clearInterval(drain);
-    }
-    }, 1000);
-
 
     $("#hungry").click(function(event){
       event.preventDefault();

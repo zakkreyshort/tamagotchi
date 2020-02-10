@@ -43,4 +43,35 @@ export class Tamagotchi {
     }
   }
 
+  pikaConfused() {
+    if ((this.happy < 70) && (this.hunger < 70)) {
+      return true;
+    } else { 
+      return false;
+    }
+  }
+
+  pikaSad() {
+    if ((this.happy < 30) && (this.hunger < 30)) {
+      return true;
+    } else { 
+      return false;
+    }
+  }
+
+  showHappy() {
+    if((this.happy > 70) && (this.hunger > 70)) {
+      return true;
+    } else{
+      return false;
+    }
+  }
+
+  showConfused() {
+    if((this.happy > 30) && (this.hunger > 30)) {
+      return true;
+    } else{
+      return false;
+    }
+  }
 }
