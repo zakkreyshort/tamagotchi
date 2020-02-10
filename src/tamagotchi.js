@@ -5,7 +5,17 @@ export class Tamagotchi {
     this.happy = 100;
   }
 
-  setName() {
-    
-  }
+  setHunger() {
+    setInterval(() => {
+      this.hunger--;
+    }, 5000);
+  };
+
+  setHappy() {
+    setInterval(() => {
+      this.happy--;
+    }, 5000);
+  };
+
+
 }
