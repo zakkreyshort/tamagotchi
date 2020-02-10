@@ -7,6 +7,12 @@ import './styles.css';
 $(document).ready(function(){
   let goober = new Tamagotchi("goober");
 
+  $("#startGame").click(function(event){
+    event.preventDefault();
+    goober.feed();
+    goober.pet();
+  });
+
   
   $("#hungrymeter").html(goober.hunger);
   $("#happymeter").html(goober.happy);

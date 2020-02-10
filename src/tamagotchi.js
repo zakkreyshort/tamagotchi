@@ -1,8 +1,8 @@
 export class Tamagotchi {
   constructor(name){
     this.name = name;
-    this.hunger = 10;
-    this.happy = 10;
+    this.hunger = 100;
+    this.happy = 100;
   }
 
   setHunger() {
