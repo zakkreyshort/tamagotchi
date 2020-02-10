@@ -26,4 +26,22 @@ describe('Goober', () => {
 		expect(goober.happy).toEqual(98);
 	});
 
+	test('should increase hunger back to 100', () => {
+		jest.advanceTimersByTime(5001);
+		goober.feed();
+		expect(goober.hunger).toEqual(100);
+	});
+
+	test('should increase happiness back to 100', () => {
+		jest.advanceTimersByTime(5001);
+		goober.pet();
+		expect(goober.happy).toEqual(100);
+	});
+
+	test('should die if hunger & happiness is <= 0', () => {
+		goober.hunger = 0;
+		goober.happy = 0;
+		expect(goober.die()).toEqual(true);
+	});
+
 })

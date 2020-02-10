@@ -17,5 +17,20 @@ export class Tamagotchi {
     }, 5000);
   };
 
+  feed() {
+    this.hunger = 100;
+  };
+
+  pet(){
+    this.happy = 100;
+  };
+
+  die(){
+    if((this.hunger === 0) && (this.happy === 0)){
+      return true;
+    } else{
+      return false;
+    }
+  }
 
 }
