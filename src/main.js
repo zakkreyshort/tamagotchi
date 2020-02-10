@@ -12,8 +12,7 @@ $(document).ready(function(){
     let tamagotchiName = $("#tamagotchiname").val();
     $("#displayname").append(tamagotchiName);
     $(".main").show();
-    goober.feed();
-    goober.pet();
+    goober.start();
     $("#splash").hide();
   });
 
@@ -28,6 +27,7 @@ $(document).ready(function(){
     $("#happymeter").text(goober.happy);
     $("#happy-bar").css("width", goober.happy + "%");
     if(goober.die()){
+      $(".dead").show();
       clearInterval(drain);
     }
     }, 1000);

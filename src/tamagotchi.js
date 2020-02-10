@@ -17,13 +17,18 @@ export class Tamagotchi {
     }, 1000);
   }
 
-  feed() {
+  start(){
     this.hunger = 100;
+    this.happy = 100;
+  }
+
+  feed() {
+    this.hunger += 15;
     this.happy += 10; 
   }
 
   pet(){
-    this.happy = 100;
+    this.happy += 15;
   }
 
   die(){

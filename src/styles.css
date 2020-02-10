@@ -10,3 +10,7 @@
 #splash {
   text-align: center;
 }
+
+.dead{
+  display: none;
+}
