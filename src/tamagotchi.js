@@ -19,6 +19,7 @@ export class Tamagotchi {
 
   feed() {
     this.hunger = 100;
+    this.happy += 10; 
   }
 
   pet(){
