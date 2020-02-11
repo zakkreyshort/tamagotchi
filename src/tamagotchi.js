@@ -11,13 +11,13 @@ export class Tamagotchi {
 
   setHunger() {
     setInterval(() => {
-      this.hunger-=10;
+      this.hunger-=5;
     }, 1000);
   }
 
   setHappy() {
     setInterval(() => {
-      this.happy-=10;
+      this.happy-=5;
     }, 1000);
   }
 
